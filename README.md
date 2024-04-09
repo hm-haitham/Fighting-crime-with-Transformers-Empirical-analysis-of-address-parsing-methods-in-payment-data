@@ -44,6 +44,7 @@ ASCII format.
 ## Data
 
 You can download the data from https://paperswithcode.com/dataset/v2-train-pkl
+
 Or directly from HF : https://huggingface.co/datasets/hm-haitham/address_parser_data
 
 The downloaded datasets should be placedin the data folder
@@ -80,6 +81,3 @@ For prediction, you can run predict.py while specifying the path to your fine-tu
 python predict.py -model your-model
 ```
 We have the same structure for training and inference of LLMs, with the default being "mistralai/Mistral-7B-Instruct-v0.2". We have additionally provided jupyter notebooks showing the procedure of both scripts.
-```
-
-
