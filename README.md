@@ -80,4 +80,6 @@ For prediction, you can run predict.py while specifying the path to your fine-tu
 ```bash
 python predict.py -model your-model
 ```
+The model with the best results describre in our paper can be downloaded from https://huggingface.co/hm-haitham/xlm-roberta-large-address-parser
+
 We have the same structure for training and inference of LLMs, with the default being "mistralai/Mistral-7B-Instruct-v0.2". We have additionally provided jupyter notebooks showing the procedure of both scripts.
