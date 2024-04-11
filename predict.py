@@ -73,7 +73,7 @@ def predict_(arg_model):
         
 
         #MODEL = "distilbert" #VERSION + " model"
-        model = AutoModelForTokenClassification.from_pretrained('models/results-' + MODEL, num_labels=len(unique_tags))
+        model = AutoModelForTokenClassification.from_pretrained(model_path, num_labels=len(unique_tags))
 
         model.eval()
 
@@ -88,6 +88,10 @@ def predict_(arg_model):
         preds = trainer.predict(dataset)
 
         # LOG RESULTS
+        if not os.path.exists('models'):
+            os.makedirs('models')
+        if not os.path.exists('models/results-'+MODEL):
+            os.makedirs('models/results-'+MODEL)
         pred_labels = np.argmax(preds.predictions, axis=2)
         total_acc_count = 0
         total_label_count = 0
